@@ -22,9 +22,10 @@ class App extends Component {
                 {this.state.submitState ?
                     <div className="ui segment">
                         <Image.Group size="small">
-                            {this.state.images.map((image) => {
+                            {this.state.images.map((image, key) => {
                                 return (
                                     <Image 
+                                        key={key}
                                         src={image.urls.small} 
                                         style={
                                             { 
